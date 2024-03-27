@@ -385,7 +385,7 @@ header.drop button span {
 .project_web .content_box {
   display: flex;
   gap: 60px;
-  justify-content: space-between;
+  /* justify-content: space-around; */
   align-items: center;
   /* border: 1px solid #000; */
 }
@@ -393,7 +393,7 @@ header.drop button span {
   width: 680px;
   height: 500px;
   background-color: var(--font-color-gray);
-  overflow: scroll;
+  overflow-x: hidden;
 }
 .project_web .content_box .project_preview img {
   width: 100%;
