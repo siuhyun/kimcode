@@ -91,9 +91,6 @@ header h1 {
   background-size: contain;
   opacity: 1;
 }
-header .inner nav {
-  
-}
 header ul {
   /* border: 1px solid #000; */
   /* width: 466px; */
@@ -151,7 +148,6 @@ header.drop ul li {
   padding: 20px 10px;
   color: #000;
 }
-header.drop ul li a {}
 header.drop button {
   display: block;
   position: fixed;
@@ -190,7 +186,17 @@ header.drop button span {
   top: 40%;
   left: 50%;
   transform: translate(-50%,-50%);
+  text-align: center;
 }
+.visual .inner .text_box h1 {
+  font-size: 8rem;
+  font-family: "Caveat Brush";
+  -webkit-text-stroke: 3px var(--header-color);
+}
+.visual .inner .text_box p {
+  font-size: 22px;
+}
+
 /* Profile */
 .profile .container dl {
   display: flex;
@@ -253,6 +259,9 @@ header.drop button span {
   width: 50%;
   /* margin-bottom: 35px; */
 }
+.profile .container .education span {
+  color: var(--project);
+}
 .profile .container .education dl {
   flex-direction: column;
 }
@@ -265,6 +274,22 @@ header.drop button span {
 }
 .profile .skill {
   width: 50%;
+}
+.profile .skill .top {
+  display: flex;
+  width: 79%;
+  justify-content: space-between;
+  /* border: 1px solid #000; */
+}
+.profile .skill .top p {
+  padding-top: 10px;
+  font-size: 17px;
+  animation: skill_p 0.5s alternate infinite;
+}
+
+@keyframes skill_p {
+  0% {transform:translateY(2px);}
+  100% {transform:translateY(-3px);}
 }
 .profile .icon_box {
   display: flex;
@@ -330,12 +355,13 @@ header.drop button span {
   margin-top: 120px;position: relative;
 }
 .project>h2 {
-  text-align: center;
+  margin-bottom: 0;
 }
 .project .inner {
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 80%;
 }
 .project nav.fixed {
   transition: opacity .4s;
@@ -367,12 +393,14 @@ header.drop button span {
   padding: 0 20px;
 }
 .project .nav__menu li a {
-  font-size: 17px;
+  font-size: 18px;
   white-space: nowrap;
   
 }
 .project .nav__menu li a.nav__menu--foused {
-  color: purple;font-size: 20px;font-weight: 600;
+  color: var(--project);
+  font-size: 21px;
+  font-weight: 600;
 }
 /* PROJECT_WEB */
 .project_web {
@@ -381,6 +409,8 @@ header.drop button span {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  width: 100%;
+  padding-left: 5%;
 }
 .project_web .content_box {
   display: flex;
@@ -390,9 +420,9 @@ header.drop button span {
   /* border: 1px solid #000; */
 }
 .project_web .content_box .project_preview {
-  width: 680px;
-  height: 500px;
-  background-color: var(--font-color-gray);
+  width: 700px;
+  height: 520px;
+  /* background-color: var(--font-color-gray); */
   overflow-x: hidden;
 }
 .project_web .content_box .project_preview img {
@@ -402,7 +432,9 @@ header.drop button span {
   margin-bottom: 35px;
 }
 .project_web .text_content  {
-  
+  /* border: 1px solid green; */
+  /* max-width: 800px; */
+
 }
 .project_web .text_content dl {
   display: flex;
@@ -426,14 +458,13 @@ header.drop button span {
 
 /* CONTACT */
 .contact {
-  /* padding: 70px 0; */
   text-align: center;
   /* border: 1px solid red; */
-  margin: 70px 0;
+  margin-top: 200px;
 }
 .contact .inner {
   width: 1400px;
-  height: 500px;
+  height: 580px;
   /* padding: 75px 0; */
   /* margin: 75px auto; */
   display: flex;
@@ -456,8 +487,6 @@ header.drop button span {
 }
 .contact h2::after {margin-left: 10px;}
 .contact h2::before {margin-right: 10px;}
-.contact .email {
-}
 .contact .email p {
   font-size: 20px;
   margin-bottom: 25px;

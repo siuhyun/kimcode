@@ -18,6 +18,7 @@
   <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
   <script defer src="./js/test.js"></script>
 </head>
+
 <body>
   <div id="wrap">
     <header>
@@ -73,16 +74,26 @@
           </div>
           <div class="certificate">
             <h3>CERTIFICATE</h3>
-            <dl>
-              <dt>2022.05</dt>
-              <dd>HSK6급</dd>
-            </dl>
+            <div class="content">
+              <dl>
+                <dt>2020.09</dt>
+                <dd>운전면허 2종</dd>
+              </dl>
+              <dl>
+                <dt>2022.05</dt>
+                <dd>중어 HSK 6급</dd>
+              </dl>
+              <dl>
+                <dt>2023.07</dt>
+                <dd>TOEIC-Speaking Lv.IH</dd>
+              </dl>
+            </div>
           </div>
           <div class="education">
             <h3>EDUCATION</h3>
             <dl>
               <dt>2023.10 ~ 2024.03</dt>
-              <dd>이젠 아카데미 UI/UX 웹 퍼블리셔 프론트엔드 양성과정 수료</dd>
+              <dd>이젠 아카데미 UI/UX 웹 퍼블리셔 프론트엔드 양성과정 <span>"우수상"</span> 수료</dd>
             </dl>
             <dl>
               <dt>2022.06</dt>
@@ -90,8 +101,11 @@
             </dl>
           </div>
           <div class="skill">
-            <h3>SKILL</h3>
-            <div class="icon_box">
+            <div class="top">
+              <h3>SKILL</h3>
+              <p>아이콘에 마우스를 올려주세요!</p>
+            </div class="top">
+              <div class="icon_box">
               <div>
                 <span class="skil_icon"><img src="./img/icon_html.png" alt=""></span>
                 <p class="arrow_box">유효성 문제 없이 HTML5 웹 접근성에 올바르게 구조를 구성할 수 있습니다.</p>
@@ -142,21 +156,20 @@
             <li><a href="#kjcareer">Kjcareer 반응형 웹</a></li>
             <li><a href="#jiransecurity">지란지교 시큐리티</a></li>
             <li><a href="#navercorp">네이버 corp</a></li>
-            <li><a href="#blog">블로그 게시판</a></li>
+            <!-- <li><a href="#blog">블로그 게시판</a></li> -->
             <li><a href="#todolist">Todo List</a></li>
             <li><a href="#desney">디즈니 플러스 앱</a></li>
             <li><a href="#design">UI/UX 디자인</a></li>
             <li><a href="#poster">포스터 디자인</a></li>
           </ul>
         </nav>
+
         <div class="inner">
             <h2>Project</h2>
             <section id="orion" class="project_web" >
               <h2>01 ORION</h2>
               <div class="content_box">
                 <div class="project_preview">
-                  <!-- preview images -->
-                  <!-- <iframe class="project_preview" src="https://siuhyun.github.io/Orion/" frameborder="0"></iframe> -->
                   <img src="./img/screencapture-siuhyun-github-io-Orion-2024-03-25-15_11_38.png" alt="">
                 </div>
                 <div class="text_content">
@@ -167,18 +180,18 @@
                   </dl>
                   <dl>
                     <dt>제작기간</dt>
-                    <dd>10일 (개인작업 100%)</dd>
+                    <dd>20일 (개인작업 100%)</dd>
                   </dl>
                   <dl>
                     <dt>TOOL</dt>
                     <dd>photoshop, figma, HTML, CSS, JavaScript</dd>
                   </dl>
                   <span class="overview">OVERVIEW:</span>
-                  <p>기업 브랜드 이미지를 적극 반영하여 <br>
-                    시각적 요소를 현대적으로 업데이트 시켰습니다.</p>
+                  <p>기존 사이트의 사용자 경험을 개선하여 사용자들이 쉽게 정보를 찾고 <br>
+                    기업 브랜드 이미지를 반영하여 시각적 요소를 현대적으로 업데이트 시켰습니다.</p>
                   <div class="btn_box">
                     <button class="btn_style1"><a href="https://siuhyun.github.io/Orion/" target="_blank">사이트 보기</a></button>
-                    <button class="btn_style1"><a href="https://www.figma.com/file/0U2EcQdbJLLYImRKWfhaoR/%ED%8F%AC%ED%8A%B8%ED%8F%B4%EB%A6%AC%EC%98%A4_%EA%B9%80%EC%88%98%ED%98%84?type=design&node-id=291%3A2&mode=dev&t=gOJm5sr6TfSFpIIL-1" target="_blank">와이어프레임</a></button>
+                    <button class="btn_style1"><a href="https://www.figma.com/file/pHHcwV0Lfwy1nM9N40DPUj/NCS_%EC%9B%B9%ED%94%84%EB%A1%9C%EC%A0%9D%ED%8A%B8-%EC%98%A4%EB%A6%AC%EC%98%A8(PC%2C%EB%AA%A8%EB%B0%94%EC%9D%BC)?type=design&node-id=2387%3A2284&mode=dev&t=aYkMjdqZ4zODf52o-1" target="_blank">와이어프레임</a></button>
                   </div>
                 </div>
               </div>
@@ -204,26 +217,27 @@
                     <dd>Figma, HTML, CSS, JavaScript</dd>
                   </dl>
                   <span class="overview">OVERVIEW:</span>
-                  <p>메인페이지를 카테고리별로 분류하여 <br>
-                    사용자들이 정보를 쉽게 접근할 수 있도록 리디자인했습니다.</p>
+                  <p>검색창, 장바구니, 전체메뉴 기능을 구현한 iPad Korea 사이트 클론 프로젝트입니다. <br>
+                    미디어쿼리를 사용하여 PC, 테블릿, 모바일 화면에 반응할 수 있게 제작했습니다.
+                  </p>
                   <div class="btn_box">
                     <button class="btn_style1"><a href="https://ipad-sandy.vercel.app/" target="_blank">사이트 보기</a></button>
-                    <button class="btn_style1"><a href="#">와이어프레임</a></button>
+                    <button class="btn_style1"><a href="https://github.com/siuhyun/ipad" target="_blank">코드보기</a></button>
                   </div>
                 </div>
               </div>
             </section>
             <section id="starbucks" class="project_web">
-              <h2>03 Starbucks</h2>
+              <h2>03 Starbucks Korea</h2>
               <div class="content_box">
                 <div class="project_preview">
                   <img src="./img/screencapture-glowing-axolotl-7840cd-netlify-app-2024-03-25-16_37_12.png" alt="">
                 </div>
                 <div class="text_content">
-                  <h3>반응형 웹 페이지</h3>
+                  <h3>데스크탑 웹 페이지</h3>
                   <dl>
                     <dt>프로젝트 구성</dt>
-                    <dd>반응형 Main Page</dd>
+                    <dd>Main Page, signin Page</dd>
                   </dl>
                   <dl>
                     <dt>제작기간</dt>
@@ -234,11 +248,12 @@
                     <dd>illustrator, HTML, CSS, JavaScript</dd>
                   </dl>
                   <span class="overview">OVERVIEW:</span>
-                  <p>기업 브랜드 이미지를 적극 반영하여 <br>
-                    시각적 요소를 현대적으로 업데이트 시켰습니다.</p>
+                  <p>유튜브 API 연동과 Gsap 플로그인을 활용하여 제작한 클론 프로젝트입니다. <br>
+                    사용자와 상호작용할 수 있는 기능으로 signin 페이지를 구현했습니다.
+                  </p>
                   <div class="btn_box">
-                    <button class="btn_style1"><a href="https://glowing-axolotl-7840cd.netlify.app/" target="_blank">사이트 보기</a></button>
-                    <button class="btn_style1"><a href="#">와이어프레임</a></button>
+                    <button class="btn_style1"><a href="https://siuhyun.github.io/starbucksKorea/" target="_blank">사이트 보기</a></button>
+                    <button class="btn_style1"><a href="https://github.com/siuhyun/starbucksKorea" target="_blank">코드보기</a></button>
                   </div>
                 </div>
               </div>
@@ -264,11 +279,11 @@
                     <dd>illustrator, HTML, CSS, JavaScript</dd>
                   </dl>
                   <span class="overview">OVERVIEW:</span>
-                  <p>기업 브랜드 이미지를 적극 반영하여 <br>
-                    시각적 요소를 현대적으로 업데이트 시켰습니다.</p>
+                  <p>기존 페이지의 레이아웃을 기반으로 제작한 클론 프로젝트입니다. <br>
+                    미디어쿼리를 사용하여 PC, 테블릿, 모바일 화면에 반응할 수 있게 제작했습니다.</p>
                   <div class="btn_box">
                     <button class="btn_style1"><a href="https://siuhyun.github.io/Kjcareer/" target="_blank">사이트 보기</a></button>
-                    <button class="btn_style1"><a href="#">와이어프레임</a></button>
+                    <button class="btn_style1"><a href="https://github.com/siuhyun/Kjcareer" target="_blank">코드보기</a></button>
                   </div>
                 </div>
               </div>
@@ -283,7 +298,7 @@
                   <h3>반응형 웹 페이지</h3>
                   <dl>
                     <dt>프로젝트 구성</dt>
-                    <dd>반응형 Main Page</dd>
+                    <dd>반응형 Main page</dd>
                   </dl>
                   <dl>
                     <dt>제작기간</dt>
@@ -294,11 +309,13 @@
                     <dd>illustrator, HTML, CSS, JavaScript</dd>
                   </dl>
                   <span class="overview">OVERVIEW:</span>
-                  <p>유튜브 API 연동, 사이트맵 기능 구현을 위해 <br>
-                    클론코딩 프로젝트 입니다.</p>
+                  <p>
+                    기존 페이지의 레이아웃을 기반으로 제작한 클론 프로젝트입니다. <br>
+                    미디어쿼리를 사용하여 PC, 테블릿, 모바일 화면에 반응할 수 있게 제작했습니다.
+                    </p>
                   <div class="btn_box">
                     <button class="btn_style1"><a href="https://siuhyun.github.io/Jiransecu/" target="_blank">사이트 보기</a></button>
-                    <button class="btn_style1"><a href="#">와이어프레임</a></button>
+                    <button class="btn_style1"><a href="https://github.com/siuhyun/Jiransecu" target="_blank">코드보기</a></button>
                   </div>
                 </div>
               </div>
@@ -313,7 +330,7 @@
                   <h3>반응형 웹 페이지</h3>
                   <dl>
                     <dt>프로젝트 구성</dt>
-                    <dd>Main Page</dd>
+                    <dd>메인페이지, 서브페이지*3</dd>
                   </dl>
                   <dl>
                     <dt>제작기간</dt>
@@ -324,48 +341,18 @@
                     <dd>illustrator, HTML, CSS, JavaScript</dd>
                   </dl>
                   <span class="overview">OVERVIEW:</span>
-                  <p>유튜브 API 연동, 사이트맵 기능 구현을 위해 <br>
-                    클론코딩 프로젝트 입니다.</p>
+                  <p>기존사이트의 레이아웃을 반영한 클론코딩 프로젝트 입니다. <br>
+                    주요연혁, For developers, 스토리 부분의 서브페이지를 제작했습니다.</p>
                   <div class="btn_box">
                     <button class="btn_style1"><a href="https://siuhyun.github.io/navercorp/" target="_blank">사이트 보기</a></button>
-                    <button class="btn_style1"><a href="#">와이어프레임</a></button>
+                    <button class="btn_style1"><a href="https://github.com/siuhyun/navercorp" target="_blank">코드보기</a></button>
                   </div>
                 </div>
               </div>
             </section>
-            <section id="blog" class="project_web">
-              <h2>07 Blog React app</h2>
-              <div class="content_box">
-                <iframe class="project_preview" src="" frameborder="0">
-                <!-- <iframe class="project_preview" src="https://glowing-axolotl-7840cd.netlify.app/" frameborder="0"> -->
-                  <!-- preview images -->
-                </iframe>
-                <div class="text_content">
-                  <h3>리액트 게시판 만들기</h3>
-                  <dl>
-                    <dt>프로젝트 구성</dt>
-                    <dd>메인페이지, 글 목록 페이지, 편집 페이지</dd>
-                  </dl>
-                  <dl>
-                    <dt>제작기간</dt>
-                    <dd>10일 (개인작업 100%)</dd>
-                  </dl>
-                  <dl>
-                    <dt>TOOL</dt>
-                    <dd>React, HTML, CSS, JavaScript</dd>
-                  </dl>
-                  <span class="overview">OVERVIEW:</span>
-                  <p>블로그와 게시판 페이지를 연습하기 위해 <br>
-                    React로 만든 토이프로젝트 입니다.</p>
-                  <div class="btn_box">
-                    <button class="btn_style1"><a href="https://glowing-axolotl-7840cd.netlify.app/">사이트 보기</a></button>
-                    <button class="btn_style1"><a href="#">와이어프레임</a></button>
-                  </div>
-                </div>
-              </div>
-            </section>
+            
             <section id="todolist" class="project_web">
-              <h2>08 TODO LIST</h2>
+              <h2>07 TODO LIST</h2>
               <div class="content_box">
                 <iframe class="project_preview" src="https://siuhyun.github.io/todolist/" frameborder="0">
                 </iframe>
@@ -394,48 +381,51 @@
               </div>
             </section>
             <section id="desney" class="project_web">
-              <h2>09 디즈니 플러스 앱</h2>
+              <h2>08 디즈니 플러스 앱</h2>
               <div class="content_box">
-                <iframe class="project_preview" src="" frameborder="0">
-                <!-- <iframe class="project_preview" src="https://glowing-axolotl-7840cd.netlify.app/" frameborder="0"> -->
-                  <!-- preview images -->
+                <div class="project_preview">
+                  <img src="./img/screencapture-react-disney-plus-app-fd2dc-web-app-main-2024-04-04-13_28_14.png" alt="">
+                </div>
                 </iframe>
                 <div class="text_content">
-                  <h3>리액트 영화 목록 만들기</h3>
+                  <h3>리액트 영화 목록 앱 만들기</h3>
                   <dl>
                     <dt>프로젝트 구성</dt>
-                    <dd>리스트 페이지, 목록 수정 페이지</dd>
+                    <dd>영화상세보기, 메인페이지, 로그인페이지, 검색페이지</dd>
                   </dl>
                   <dl>
                     <dt>제작기간</dt>
-                    <dd>10일 (개인작업 100%)</dd>
+                    <dd>40시간 (개인작업 100%)</dd>
                   </dl>
                   <dl>
                     <dt>TOOL</dt>
-                    <dd>React, HTML, CSS, JavaScript</dd>
+                    <dd>React, JavaScript, axios, HTML, CSS</dd>
                   </dl>
                   <span class="overview">OVERVIEW:</span>
                   <p>
-                    React로 만든 토이프로젝트 입니다.</p>
+                    "react-router-dom" 을 활용하여 앱 내 페이지 이동 네비게이션을 구현했습니다. <br/>
+                    사용자 인증 및 데이터베이스 관리를 위해 Firebase를 활용했습니다. <br />
+                    앱에서 데이터를 가져오기 위해 Axios를 사용했습니다. <br /> 
+                    TheMovieDB API와의 통합을 통해 영화 정보를 가져오고 표시하는 데 사용되었습니다.
+                  </p>
                   <div class="btn_box">
-                    <button class="btn_style1"><a href="https://glowing-axolotl-7840cd.netlify.app/">사이트 보기</a></button>
-                    <button class="btn_style1"><a href="#">와이어프레임</a></button>
+                    <button class="btn_style1"><a href="https://react-disney-plus-app-fd2dc.web.app/" target="_blank">사이트 보기</a></button>
+                    <button class="btn_style1"><a href="https://github.com/siuhyun/react-disney-plus-app" target="_blank">코드보기</a></button>
                   </div>
                 </div>
               </div>
             </section>
             <section id="design" class="project_web">
-              <h2>10 UX/UI 디자인</h2>
+              <h2>9 UX / UI 디자인</h2>
               <div class="content_box">
-                <iframe class="project_preview" src="" frameborder="0">
-                <!-- <iframe class="project_preview" src="https://glowing-axolotl-7840cd.netlify.app/" frameborder="0"> -->
-                  <!-- preview images -->
-                </iframe>
+                <div class="project_preview">
+                  <img src="./img/iPhone 15 Pro mokup.png" alt="">
+                </div>
                 <div class="text_content">
-                  <h3>리액트 영화 목록 만들기</h3>
+                  <h3>Figma를 활용한 앱 디자인</h3>
                   <dl>
                     <dt>프로젝트 구성</dt>
-                    <dd>리스트 페이지, 목록 수정 페이지</dd>
+                    <dd>뉴스앱, 쇼핑몰 앱 프로토타입</dd>
                   </dl>
                   <dl>
                     <dt>제작기간</dt>
@@ -443,20 +433,22 @@
                   </dl>
                   <dl>
                     <dt>TOOL</dt>
-                    <dd>React, HTML, CSS, JavaScript</dd>
+                    <dd>Figma, Plugin</dd>
                   </dl>
                   <span class="overview">OVERVIEW:</span>
                   <p>
-                    React로 만든 토이프로젝트 입니다.</p>
+                    뉴스앱 레이아웃 기획, UI 컴포넌트 제작하여 사용자 친화적은 앱을 구현했습니다. <br />
+                    쇼핑몰 팝업창, 장바구니, 검색목록을 디자인하여 프로토타입으로 구현했습니다.
+                  </p>
                   <div class="btn_box">
-                    <button class="btn_style1"><a href="https://glowing-axolotl-7840cd.netlify.app/">사이트 보기</a></button>
-                    <button class="btn_style1"><a href="#">와이어프레임</a></button>
+                    <button class="btn_style1"><a href="https://www.figma.com/proto/jRu3ymYAGxS8gE57472riy/%EB%89%B4%EC%8A%A4%EC%95%B1-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85?page-id=7%3A80&type=design&node-id=49-404&viewport=388%2C179%2C0.29&t=aySbY4QDUYzu3vdj-1&scaling=scale-down&starting-point-node-id=49%3A404&mode=design" target="_blank">뉴스앱 프로토타입</a></button>
+                    <button class="btn_style1"><a href="https://www.figma.com/proto/Hwn53QVNCkv4mNNHMmXLf0/%EC%87%BC%ED%95%91%EB%AA%B0-%EC%95%B1-%ED%94%84%EB%A1%9C%ED%86%A0%ED%83%80%EC%9E%85?page-id=27%3A175&type=design&node-id=36-381&viewport=727%2C492%2C0.37&t=MglZ5EUTLBln3jGE-1&scaling=scale-down&starting-point-node-id=36%3A381&mode=design" target="_blank">쇼핑몰 프로토타입</a></button>
                   </div>
                 </div>
               </div>
             </section>
             <section id="poster" class="project_web">
-              <h2>11 포스터 디자인</h2>
+              <h2>10 포스터 디자인</h2>
               <div class="content_box">
                 <div class="project_privew">
                   <img src="./img/김수현_포스터_완성_1.png" alt="">
@@ -464,6 +456,14 @@
                 <div class="text_content">
                   <img src="./img/김수현_포스터_최종ai.jpg" alt="">
                 </div>
+              </div>
+              <div class="text_content">
+                <span class="overview">OVERVIEW:</span>
+                  <p>
+                    포스터의 목적에 따라 디자인 컨셉을 정하고, Photoshop과 Illustrator를 사용하여 시각적 요소를 만들었습니다. <br />
+                    포스터의 레이아웃과 구성은 헤드라인, 부제목, 본문 텍스트 등에 대한 폰트 선택과 이미지의 배치, 컬러 스키마 등
+                    시각적 요소를 조직하여, <br /> 포스터가 시선을 사로잡고 정보를 명확하게 전달할 수 있도록 설계했습니다.<br />
+                  </p>
               </div>
             </section>
             
