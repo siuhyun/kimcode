@@ -69,15 +69,16 @@ button a {
 
 /* Header */
 header {
-  position: fixed;
+  /* position: fixed;
   top: 0;
   z-index: 9;
-  width: 100%;
+  width: 100%; */
   background-color: var(--header-color);
   color: var(--font-color-white);
 }
 header .inner {
   /* border: 1px solid #000; */
+  width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -176,7 +177,7 @@ header.drop button span {
   position: relative;
   /* margin: auto; */
   /* border: 1px solid #000; */
-  width: 1440px;
+  width: 100%;
   height: 900px;
   /* padding-top: 300px; */
   color: var(--font-color-white);
@@ -237,6 +238,7 @@ header.drop button span {
   flex-wrap: wrap;
   justify-content: space-around;
   margin-bottom: 60px;
+  /* border: 1px solid #000; */
 }
 .profile .container .about {
   width: 50%;
@@ -293,10 +295,12 @@ header.drop button span {
 .profile .icon_box {
   display: flex;
   gap: 5px;
+  /* border: 1px solid #000; */
 }
 .profile .icon_box div {
+  /* border: 1px solid #000; */
   position: relative;
-  display: inline-block;
+  /* display: inline-block; */
 }
 .profile .icon_box span {
   display: flex;
@@ -341,12 +345,40 @@ header.drop button span {
 .profile .skil_icon:hover + p.arrow_box {
   visibility: visible;
 }
+.profile .icon_box div:nth-child(7) .arrow_box {
+  left: -150px;
+}
+.profile .icon_box div:nth-child(7) .arrow_box::after {
+  left: auto;
+  right: 15%;
+}
+.profile .icon_box div:nth-child(6) .arrow_box {
+  left: -150px;
+}
+.profile .icon_box div:nth-child(6) .arrow_box::after {
+  left: auto;
+  right: 15%;
+}
 .profile .icon_box div:last-child .arrow_box {
   left: -150px;
 }
 .profile .icon_box div:last-child .arrow_box::after {
   left: auto;
   right: 15%;
+}
+@media screen and (max-width: 1300px) {
+  .profile .container .education dl {
+    flex-direction: row;
+  }
+  .profile .container .education {
+    width: 100%;
+  }
+  .profile .skill {
+    width: 100%;
+  }
+  .profile .icon_box {
+    justify-content: space-around;
+  }
 }
 
 /* Project */
@@ -409,7 +441,7 @@ header.drop button span {
   flex-direction: column;
   justify-content: center;
   width: 100%;
-  padding-left: 5%;
+  padding: 0 5%;
 }
 .project_web .content_box {
   display: flex;
@@ -454,6 +486,15 @@ header.drop button span {
 .btn_box {
   margin-top: 40px;
 }
+.project_web .poster_preview {
+  width: 50%;
+  height: 100%;
+  /* border: 1px solid #000;   */
+}
+.project_web .poster_preview img {
+  width: 100%;
+}
+
 
 /* CONTACT */
 .contact {
@@ -462,7 +503,7 @@ header.drop button span {
   margin-top: 200px;
 }
 .contact .inner {
-  width: 1400px;
+  width: 100%;
   height: 580px;
   /* padding: 75px 0; */
   /* margin: 75px auto; */
@@ -511,6 +552,7 @@ footer {
   padding:25px 0;
 }
 footer .inner {
+  width: 100%;
   display: flex;
   gap: 10px;
   flex-direction: column;
