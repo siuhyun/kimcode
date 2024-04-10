@@ -131,6 +131,7 @@ header.drop h1 {
 header.drop nav {
   position: fixed;
   bottom: 0;
+  z-index: 999;
 }
 header.drop ul {
   position: fixed;
@@ -140,6 +141,7 @@ header.drop ul {
   transform: translateY(100%);
   transition: transform 0.4s ease;
   /* border: 1px solid #000; */
+  
 }
 header.drop ul.active {
   bottom: 100px;
@@ -164,7 +166,14 @@ header.drop button span {
 }
 @media screen and (max-width: 768px) {
   header ul {
-    display: none;
+    opacity: 0;
+  }
+  header.drop ul {
+    opacity: 1;
+    right: 5px;
+  }
+  header.drop ul li {
+    padding: 10px 5px;
   }
 }
 /* Visual */
@@ -419,8 +428,9 @@ header.drop button span {
     margin-top: 20px;
   }
   .profile .skill .top {
-    width: 70%;
+    width: 90%;
   }
+  
   .profile  .icon_box .skil_icon {
     width: 50px;
     height: 50px;
@@ -430,6 +440,20 @@ header.drop button span {
   }
   dd {
     font-size: 17px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .profile .container .about {
+    width: 60%;
+  }
+  .profile .container .certificate {
+    width: 40%;
+  }
+  .profile .skill .top p {
+    font-size: 15px;
+  }
+  .profile .icon_box {
+    border: 1px solid #000;
   }
 }
 
