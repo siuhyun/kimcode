@@ -444,10 +444,10 @@ header.drop button span {
 }
 @media screen and (max-width: 560px) {
   .profile .container .about {
-    width: 60%;
+    width: 55%;
   }
   .profile .container .certificate {
-    width: 40%;
+    width: 45%;
   }
   .profile .skill .top p {
     font-size: 15px;
@@ -699,6 +699,9 @@ header.drop button span {
   }
 }
 @media screen and (max-width: 560px) {
+  .contact .email p {
+    font-size: 16px;
+  }
   .contact .email span {
     font-size: 2rem;
   }
