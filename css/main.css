@@ -1,6 +1,7 @@
 /* Common */
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 body {
   font-family: "Poppins", "Pretendard", sans-serif;
@@ -161,7 +162,11 @@ header.drop button {
 header.drop button span {
   font-size: 50px;
 }
-
+@media screen and (max-width: 768px) {
+  header ul {
+    display: none;
+  }
+}
 /* Visual */
 /*key frame  */
 @keyframes bg {
@@ -196,6 +201,14 @@ header.drop button span {
 }
 .visual .inner .text_box p {
   font-size: 22px;
+}
+@media screen and (max-width: 560px) {
+  .visual .inner .text_box h1 {
+    font-size: 6rem;
+  }
+  .visual .inner .text_box p {
+    font-size: 18px;
+  }
 }
 
 /* Profile */
@@ -378,6 +391,9 @@ header.drop button span {
   
 }
 @media screen and (max-width: 768px) {
+  .profile .container dl {
+    flex-direction: column;
+  }
   .profile {
     flex-flow: column wrap;
     justify-content: space-around;
@@ -398,6 +414,9 @@ header.drop button span {
   .profile .img_box .photo {
     width: 300px;
     height: 342px;
+  }
+  .profile .container .education {
+    margin-top: 20px;
   }
   .profile .skill .top {
     width: 70%;
@@ -532,18 +551,41 @@ header.drop button span {
 .project_web .poster_preview img {
   width: 100%;
 }
+.project_web .poster_overview {
+  width: 100%;
+}
 @media screen and (max-width: 768px) {
+  .project .inner {
+    max-width: 90%;
+  }
+  .project_web {
+    margin-bottom: 100px;
+    /* border: 1px solid #000; */
+  }
   .project nav {
     display: none;
   }
   .project_web {
     padding: 0;
+    height: 100vh;
   }
   .project_web .content_box {
+    flex-direction: column;
     width: 100%;
+    justify-content: space-around;
+  }
+  .project_web .poster {
+    flex-direction: row;
   }
   .project_web .content_box .project_preview {
-    width: 50%;
+    width: 100%;
+    height: 300px;
+  }
+  .project_web .text_content {
+    width: 100%;
+  }
+  .project_web .text_content br {
+    display: none;
   }
   .project_web .text_content dt {
     font-size: 16px;
@@ -553,8 +595,9 @@ header.drop button span {
   }
   .project_web .text_content p {
     font-size: 18px;
-    line-height: 1.2rem;
+    line-height: 1.5rem;
   }
+  
   .btn_box {
     width: 100%;
   }
@@ -621,11 +664,19 @@ header.drop button span {
   }
 }
 @media screen and (max-width: 768px) {
+  .contact .inner {
+    width: 90%;
+  }
   .contact .email span {
     font-size: 2.5rem;
   }
   .contact .value {
     font-size: 15px;
+  }
+}
+@media screen and (max-width: 560px) {
+  .contact .email span {
+    font-size: 2rem;
   }
 }
 /* Footer */
