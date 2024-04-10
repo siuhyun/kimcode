@@ -213,7 +213,7 @@ header.drop button span {
 }
 @media screen and (max-width: 560px) {
   .visual .inner .text_box h1 {
-    font-size: 6rem;
+    font-size: 5rem;
   }
   .visual .inner .text_box p {
     font-size: 18px;
