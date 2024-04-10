@@ -120,7 +120,7 @@ header.drop {
   top: auto;
   bottom: 0;
   right: 0;
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
 }
 header.drop .inner {
   justify-content: flex-end;
@@ -453,7 +453,7 @@ header.drop button span {
     font-size: 15px;
   }
   .profile .icon_box {
-    border: 1px solid #000;
+    /* border: 1px solid #000; */
   }
 }
 
