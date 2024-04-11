@@ -297,7 +297,7 @@ header.drop button span {
   /* border: 1px solid #000; */
 }
 .profile .skill .top {
-  width: 80%;
+  width: 75%;
   display: flex;
   justify-content: space-between;
 }
