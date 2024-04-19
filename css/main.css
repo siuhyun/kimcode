@@ -17,12 +17,12 @@ body {
   display: none;
 }
 .inner {
-  width: 1520px;
+  max-width: 1440px;
   margin: auto;
 }
 h1 {
-  font-size: 72px;
-  font-family: "Montserrat Subrayada";
+  font-size: 64px;
+  font-family: "Caveat Brush";
 }
 h2 {
   font-size: 42px;
@@ -36,6 +36,7 @@ h3 {
   margin-bottom: 20px;
 }
 dd {
+  width: 100%;
   font-size: 20px;
 }
 dt {
@@ -70,22 +71,17 @@ button a {
 
 /* Header */
 header {
-  /* position: fixed;
-  top: 0;
-  z-index: 9;
-  width: 100%; */
   background-color: var(--header-color);
   color: var(--font-color-white);
+  
 }
 header .inner {
-  /* border: 1px solid #000; */
   width: 90%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 header h1 {
-  /* border: 1px solid #000; */
   width: 243px;
   height: 80px;
   background-image: url(../img/logo\(1\).png);
@@ -94,15 +90,12 @@ header h1 {
   opacity: 1;
 }
 header ul {
-  /* border: 1px solid #000; */
-  /* width: 466px; */
   display: flex;
   gap: 20px;
   justify-content: space-between;
 }
 header ul li {
   font-size: 20px;
-  
   color: #f4f5f6;
   cursor: pointer;
 }
@@ -164,7 +157,7 @@ header.drop button {
 header.drop button span {
   font-size: 50px;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 900px) {
   header ul {
     opacity: 0;
   }
@@ -175,7 +168,14 @@ header.drop button span {
   header.drop ul li {
     padding: 10px 5px;
   }
+  
 }
+@media screen and (max-width: 580px) {
+  header h1 {
+    opacity: 0;
+  }
+}
+
 /* Visual */
 /*key frame  */
 @keyframes bg {
@@ -185,37 +185,52 @@ header.drop button span {
 
 .visual {
   background-image: url(../img/bg\ -1.png);
+  background-size: cover;
   animation: bg 100s linear infinite;
-}
-.visual .inner {
+  height: 100vh;
   position: relative;
-  margin: auto;
-  /* border: 1px solid #000; */
   width: 100%;
-  height: 900px;
-  /* padding-top: 300px; */
+}
+.visual .text_box {
+  position: absolute;
+  top: 30%;
+  left: 38%;
+  text-align: center;
   color: var(--font-color-white);
 }
-.visual .inner .text_box {
-  position: absolute;
-  top: 40%;
-  left: 50%;
-  transform: translate(-50%,-50%);
-  text-align: center;
-}
-.visual .inner .text_box h1 {
+.visual .text_box h1 {
   font-size: 8rem;
-  font-family: "Caveat Brush";
   -webkit-text-stroke: 3px var(--header-color);
 }
-.visual .inner .text_box p {
+.visual .text_box p {
   font-size: 22px;
 }
-@media screen and (max-width: 560px) {
-  .visual .inner .text_box h1 {
+@media screen and (max-width: 1200px) {
+  .visual {
+    height: 100vh;
+  }
+  .visual .text_box {
+    left: 30%;
+  }
+
+}
+@media screen and (max-width: 900px) {
+  .visual .text_box {
+    left: 25%;
+  }
+  .visual .text_box h1 {
+    font-size: 6rem;
+  }
+}
+
+@media screen and (max-width: 580px) {
+  .visual .text_box {
+    left: 10%;
+  }
+  .visual .text_box h1 {
     font-size: 5rem;
   }
-  .visual .inner .text_box p {
+  .visual .text_box p {
     font-size: 17px;
   }
 }
@@ -224,8 +239,8 @@ header.drop button span {
 .profile .container dl {
   display: flex;
   line-height: 1.2em;
-  width: 100%;
   margin-bottom: 15px;
+  width: 100%;
 }
 .profile {
   padding: 120px 0;
@@ -255,29 +270,16 @@ header.drop button span {
   background-color: #f4f4f4;
 }
 .profile .container {
-  width: 68%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-  margin-bottom: 60px;
-  /* border: 1px solid #000; */
-}
-.profile .container .about {
-  width: 50%;
-  flex-shrink: 1;
-  /* margin-bottom: 25px; */
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
 }
 .profile .container .about .content {
   display: flex;
   flex-flow: row wrap;
-  /* width: 635px; */
 }
 .profile .container dt {
   width: 80px;
-}
-.profile .container .education {
-  width: 50%;
-  /* margin-bottom: 35px; */
 }
 .profile .container .education span {
   color: var(--project);
@@ -289,15 +291,12 @@ header.drop button span {
   width: 170px;
   margin: 10px 0;
 }
-.profile .container .certificate {
-  width: 50%;
-}
 .profile .skill {
-  width: 50%;
   /* border: 1px solid #000; */
+  padding-right: 20px;
 }
 .profile .skill .top {
-  width: 75%;
+  width: 90%;
   display: flex;
   justify-content: space-between;
 }
@@ -313,7 +312,10 @@ header.drop button span {
 }
 .profile .icon_box {
   display: flex;
+  width: 100%;
   /* border: 1px solid #000; */
+  box-sizing: border-box;
+  justify-content: space-around;
 }
 .profile .icon_box div {
   /* border: 1px solid #000; */
@@ -384,85 +386,106 @@ header.drop button span {
   left: auto;
   right: 15%;
 }
-@media screen and (max-width: 1300px) {
-  .profile .container .education dl {
-    flex-direction: row;
+@media screen and (max-width: 1200px) {
+  .profile .container {
+    grid-template-areas:
+    "about certificate"
+    "education education"
+    "skill skill"
   }
-  .profile .container .education {
-    width: 100%;
+  .profile .about {
+    grid-area: about;
+  }
+  .profile .certificate {
+    grid-area: certificate;
+  }
+  .profile .education {
+    grid-area: education;
   }
   .profile .skill {
-    width: 100%;
+    grid-area: skill;
   }
-  .profile .skill .top {
-    width: 55%;
-  }
-  
 }
-@media screen and (max-width: 768px) {
-  .profile .container dl {
-    flex-direction: column;
-  }
+@media screen and (max-width: 900px) {
   .profile {
     flex-flow: column wrap;
     justify-content: space-around;
     align-items: center;
-    gap: 20px;
-  }
-  .profile .container {
-    width: 90%;
+    /* gap: 20px; */
   }
   .profile .profile_bg {
     width: 100%;
-    /* height: 400px; */
+    height: 370px;
   }
   .profile .profile_bg .img_box {
-    right: 20%;
-    top: 20%;
+    right: 30%;
   }
   .profile .img_box .photo {
     width: 300px;
     height: 342px;
   }
+  .profile .container {
+    margin-top: 70px;
+  }
   .profile .container .education {
     margin-top: 20px;
   }
-  .profile .skill .top {
-    width: 90%;
+  .profile .container .education dt {
+    margin: 5px 0;
   }
-  
   .profile  .icon_box .skil_icon {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
   }
   .profile  .icon_box .skil_icon img {
     width: 40px;
     height: 40px;
   }
   .profile .icon_box {
-    justify-content: space-around;
+    gap: 5px;
   }
   dd {
+    width: auto;
     font-size: 17px;
   }
-}
-@media screen and (max-width: 560px) {
-  .profile .container .about {
-    width: 55%;
+  .profile .arrow_box {
+    width: 150px;
   }
-  .profile .container .certificate {
-    width: 45%;
+  .profile .skill {
+    padding-right: 0;
+  }
+  .profile .skill .top {
+    width: 100%;
   }
   .profile .skill .top p {
     font-size: 15px;
   }
-  .profile  .icon_box .skil_icon {}
 }
+@media screen and (max-width: 580px) {
+  .profile {
+    align-items: stretch;
+    
+  }
+  .profile .container {
+    grid-template-areas:
+    "about about"
+    "certificate certificate"
+    "education education"
+    "skill skill";
+    padding-left: 20px;
+  }
+  .profile .profile_bg .img_box {
+    right: 13%;
+  }
+  
+}
+
 
 /* Project */
 .project {
   margin-top: 120px;
   position: relative;
+  /* border: 1px solid #000; */
 }
 .project>h2 {
   margin-bottom: 0;
@@ -471,7 +494,7 @@ header.drop button span {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 80%;
+  padding-left: 10%;
 }
 .project nav.fixed {
   transition: opacity .4s;
@@ -484,11 +507,6 @@ header.drop button span {
   height: 100vh;
   overflow: auto;
   width: 100%;
-/*
-  background-color: white;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 8px 13px -5px,
-    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  opacity: 0; */
 
 }
 .project ul.nav__menu {
@@ -519,15 +537,13 @@ header.drop button span {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
-  padding: 0 5%;
+  width: 90%;
+  
 }
 .project_web .content_box {
   display: flex;
   gap: 60px;
-  /* justify-content: space-around; */
   align-items: center;
-  /* border: 1px solid #000; */
 }
 .project_web .content_box .project_preview {
   /* width: 700px;
@@ -581,27 +597,29 @@ header.drop button span {
 .project_web .poster_overview {
   width: 100%;
 }
-@media screen and (max-width:1000px) {
-  
-}
-@media screen and (max-width: 768px) {
-  .overview {
-    margin-top: 10px;
+@media screen and (max-width: 1200px) {
+  .project .inner {
+    padding-left: 15%;
   }
-  .project_web {
-    margin-bottom: 100px;
-    /* border: 1px solid #000; */
+}
+@media screen and (max-width: 900px) {
+  .project .inner {
+    padding-left: 0;
   }
   .project nav {
     display: none;
   }
-  .project_web {
-    padding: 0;
+}
+@media screen and (max-width: 768px) {
+  
+  .overview {
+    margin-top: 10px;
   }
   .project_web h2 {
     font-size: 2rem;
   }
   .project_web .content_box {
+    min-height: 390px;
     flex-direction: column;
     width: 100%;
     gap: 10px;
@@ -645,25 +663,16 @@ header.drop button span {
   
 }
 @media screen and (max-width: 560px) {
-  
+  .project_preview {
+    max-height: 390px;
+  }
 }
 
 /* CONTACT */
 .contact {
   text-align: center;
-  /* border: 1px solid red; */
   margin-top: 200px;
-}
-.contact .inner {
-  /* border: 1px solid #000; */
-  width: 100%;
-  height: 580px;
-  /* padding: 75px 0; */
-  /* margin: 75px auto; */
-  display: flex;
-  flex-direction: column;
-  gap: 35px;
-  justify-content: center;
+  height: 700px;
 }
 .contact h2 {
   display: flex;
@@ -680,12 +689,21 @@ header.drop button span {
 }
 .contact h2::after {margin-left: 10px;}
 .contact h2::before {margin-right: 10px;}
+.contact .inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  /* border: 1px solid #000; */
+  height: 80%;
+  gap: 50px;
+}
 .contact .email p {
-  font-size: 20px;
-  margin-bottom: 25px;
+  padding-bottom: 20px;
 }
 .contact .email span  {
-  font-size: 5rem;
+  font-size: 72px;
   font-weight: 600;
   background: #9759bb;
   background: linear-gradient(-154deg, #9759bb 20%, #fca6c6 60%, #f6af97 80%);
@@ -693,36 +711,45 @@ header.drop button span {
   -webkit-background-clip: text;
 }
 .contact .value {
-  margin: 30px 0;
   font-size: 18px;
   color: var(--font-color-gray);
-  line-height: 1.5;
+  line-height: 1.5em;
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 980px) {
   .contact .email span {
-    font-size: 4rem;
+    font-size: 3.5rem;
   }
 }
 @media screen and (max-width: 740px) {
+  
+  .contact .email span {
+    font-size: 3rem;
+  }
+  .contact .value {
+    font-size: 0.8rem;
+  }
+  
+}
+@media screen and (max-width: 580px) {
+  .contact {
+    height: 500px;
+    margin-top: 100px;
+  }
   .contact .inner {
     width: 90%;
   }
-  .contact .email span {
-    font-size: 2.5rem;
-  }
-  .contact .value {
-    font-size: 15px;
-  }
-}
-@media screen and (max-width: 560px) {
   .contact .email p {
-    font-size: 16px;
+    font-size: 1rem;
   }
   .contact .email span {
-    font-size: 2rem;
+    font-size: 1.8rem;
+  }
+  .contact .value br {
+    display: none;
   }
 }
+
 /* Footer */
 footer {
   text-align: center;
@@ -740,6 +767,11 @@ footer p {font-size: 16px;color:#666}
 @media screen and (max-width: 740px) {
   footer p {
     font-size: 15px;
+  }
+}
+@media screen and (max-width: 580px) {
+  footer p {
+    font-size: 0.7rem;
   }
 }
 
