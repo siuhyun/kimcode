@@ -464,7 +464,6 @@ header.drop button span {
 @media screen and (max-width: 580px) {
   .profile {
     align-items: stretch;
-    
   }
   .profile .container {
     grid-template-areas:
@@ -476,6 +475,9 @@ header.drop button span {
   }
   .profile .profile_bg .img_box {
     right: 13%;
+  }
+  .profile .icon_box {
+    width: 90%;
   }
   
 }
